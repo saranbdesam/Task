@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "d3d6f591-37f2-42e6-93eb-9170619de9b2",
+		"name": "Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17591358"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"saravana\",\r\n    \"email\": \"saranbdesam@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"confirm_password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/signup",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Signin",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"email\": \"saranbdesam@gmail.com\",\r\n    \"password\": \"123456\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/signin",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDkyMjgxYWQ3ZTJkZTIwOGRkODUzOCIsImVtYWlsIjoic2FyYW5iZGVzYW1AZ21haWwuY29tIiwiaWF0IjoxNjY1NzM3MzczfQ.Qw2Yi8pc75Pq3g35a4lAu8VTgfxx3b-Qe1xXZZJpjXk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/hai/Desktop/Front.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/image/add",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"image",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View image",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDkyMjgxYWQ3ZTJkZTIwOGRkODUzOCIsImVtYWlsIjoic2FyYW5iZGVzYW1AZ21haWwuY29tIiwiaWF0IjoxNjY1NzM3MzczfQ.Qw2Yi8pc75Pq3g35a4lAu8VTgfxx3b-Qe1xXZZJpjXk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/image/imgView",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"image",
+						"imgView"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update image",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDkyMjgxYWQ3ZTJkZTIwOGRkODUzOCIsImVtYWlsIjoic2FyYW5iZGVzYW1AZ21haWwuY29tIiwiaWF0IjoxNjY1NzM3MzczfQ.Qw2Yi8pc75Pq3g35a4lAu8VTgfxx3b-Qe1xXZZJpjXk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/hai/Desktop/a49fda24-201a-4fca-bbed-ba1d2efb0bbf.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/image/update",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"image",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete image",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNDkyMjgxYWQ3ZTJkZTIwOGRkODUzOCIsImVtYWlsIjoic2FyYW5iZGVzYW1AZ21haWwuY29tIiwiaWF0IjoxNjY1NzM3MzczfQ.Qw2Yi8pc75Pq3g35a4lAu8VTgfxx3b-Qe1xXZZJpjXk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{url}}/image/delete",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"image",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
